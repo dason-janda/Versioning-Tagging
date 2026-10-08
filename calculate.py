@@ -6,7 +6,9 @@ def calculate(operation, a, b):
     elif operation == 'multiply':
         return a * b
     elif operation == 'divide':
-        return a / b
+        if b != 0:
+            return a / b
+        return "Error: Cannot divide by zero"
     else:
         return "Error: Unsupported operation"
 
