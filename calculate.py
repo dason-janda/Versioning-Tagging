@@ -18,6 +18,8 @@ def calculate(operation, a, b):
         if b != 0:
             return a // b
         return "Error: Cannot divide by zero"
+    elif operation == '%':
+        return a%b
     else:
         return "Error: Unsupported operation"
 
