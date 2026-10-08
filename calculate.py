@@ -5,7 +5,7 @@ def calculate(operation, a, b):
     operation = operation.strip().lower()
 
     for value in (a, b):
-        if isinstance(value, bool) or not isinstance(value, (int, float)):
+        if isinstance(value, bool) or not isinstance(value, (int)):
             return "Error: Operands must be numbers"
 
     if operation == '+':
@@ -16,7 +16,7 @@ def calculate(operation, a, b):
         return a * b
     elif operation == '/':
         if b != 0:
-            return a / b
+            return a // b
         return "Error: Cannot divide by zero"
     else:
         return "Error: Unsupported operation"
